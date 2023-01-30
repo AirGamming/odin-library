@@ -5,9 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./app.js"></script>
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header><h1>library</h1></header>
+    <main>
+        <form action="" method="get">
+        <div class="input-and-title">
+            <label for="title">add title</label>
+            <input type="text" id="title" name="title">
+        </div>
+        <div class="input-and-title">
+            <label for="pages">number of pages</label>
+            <input type="text" id="pages" name="pages">
+        </div>
+        <div class="input-and-title">
+            <label for="author">author</label>
+            <input type="text" id="author" name="author">
+        </div>
+        <div class="input-and-title">
+            <label for="read">read</label>
+            <input type="checkbox" id="read" name="read">
+        </div>
+        <input type="button" onclick="addBookToLibrary()" value="add">
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>title</th>
+                <th>pages</th>
+                <th>author</th>
+                <th>read</th>
+                <th>remove</th>
+            </tr>
+        </thead>
+
+    </table>
+    </main>
 </body>
 </html>
