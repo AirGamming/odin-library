@@ -21,10 +21,11 @@ function addBookToLibrary() {
  
     });
     myLibrary.push(book);
+    localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
     console.log(book.read);
     refresh();
 }
-let myLibrary = [];
+
 const refresh = () =>{
     const table = document.querySelector("table");
     table.innerHTML = `
@@ -47,9 +48,13 @@ const refresh = () =>{
         row.appendChild(cell);
         table.appendChild(row);
         console.log(book);
+        
     });
 }
 const removeBook = (index) =>{
     myLibrary.splice(index, 1);
     refresh();
 }
+let myLibrary = localStorage.getItem("myLibrary") ? JSON.parse(localStorage.getItem("myLibrary")) : [];
+console.log(myLibrary);
+
